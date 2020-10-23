@@ -92,9 +92,9 @@ export default {
     },
     total_price(){
       if(this.user_category !== 'volunteer'){
-        return "$"+this.total_attendees * 100
+        return "$"+this.total_attendees * 25
       } else {
-        return "$"+this.guests * 100
+        return "$"+this.guests * 25
       }
     }
   },
@@ -112,7 +112,7 @@ export default {
           }
 
           if(this.user_category === 'volunteer'){
-            desc = desc + ' Volunteer discount $100, included.'
+            desc = desc + ' Volunteer discount included.'
           }
 
           let price = this.total_price.replace('$','')
